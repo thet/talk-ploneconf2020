@@ -8,15 +8,15 @@
 
 
 <!-- .slide: data-background="lime" -->
-<img alt="Syslab Logo" title="Syslab.com" style="width: 60%; height: auto" src="./resources/imgs/Logo_SYSLAB_ohneClaim_white_1c.svg" />
+<img alt="Syslab Logo" title="Syslab.com" style="width: 60%; height: auto" src="./resources/logos/Logo_SYSLAB_ohneClaim_white_1c.svg" />
 
 
 <!-- .slide: data-background="lime" -->
-<img alt="programmatic Logo" title="programmatic.pro" class="antiantialias" style="width: 60%; height: auto" src="./resources/imgs/programmatic-logo-w-200.png" />
+<img alt="programmatic Logo" title="programmatic.pro" class="antiantialias" style="width: 60%; height: auto" src="./resources/logos/programmatic-logo-w-200.png" />
 
 
 <!-- .slide: data-background="lime" -->
-<img alt="BlueDynamics Logo" title="bluedynamics.com" style="width: 60%; height: auto" src="./resources/imgs/bdan-logo4.svg" />
+<img alt="BlueDynamics Logo" title="bluedynamics.com" style="width: 60%; height: auto" src="./resources/logos/bdan-logo4.svg" />
 
 
 <!-- .slide: data-background="lime" -->
@@ -160,6 +160,97 @@ export default Base.extend({
 - RequireJS incompatible with modern JS
 
 - No RequireJS dependency paths
+
+
+<!-- .slide: data-background="Cyan" -->
+
+## Dynamic Imports
+
+- Normal imports:
+
+```js
+import Base from "../../core/base";
+import Masonry from "masonry-layout";
+import ImagesLoaded from "imagesloaded";
+
+export default Base.extend({
+    name: "masonry",
+    trigger: ".pat-masonry",
+
+    async init($el, opts) {
+        // ...
+    },
+});
+```
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- Dynamic imports:
+
+```js
+import "regenerator-runtime/runtime"; // needed for ``await`` support
+import Base from "../../core/base";
+
+export default Base.extend({
+    name: "masonry",
+    trigger: ".pat-masonry",
+
+    async init($el, opts) {
+        Masonry = await import("masonry-layout");
+        Masonry = Masonry.default;
+        ImagesLoaded = await import("imagesloaded");
+        ImagesLoaded = ImagesLoaded.default;
+
+        // ...
+    },
+});
+```
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- Webpack can "split chunks" from the bundle
+
+- Dynamic imported libs are seperate files
+
+- Can massively reduce the bundle size
+
+
+<!-- .slide: data-background="Cyan" -->
+
+Without dynamic imports
+
+```Bash [4]
+ploneintranet.prototype 5.1.0
+Patternslib 3
+3.5 MB bundle.js
+1.5 MB bundle.min.js
+0.7 MB chunks
+```
+
+With dynamic imports
+
+```Bash [4]
+ploneintranet.prototype master
+Patternslib 4
+1.1 MB bundle.js
+0.4 MB bundle.min.js
+4.2 MB chunks
+```
+
+
+<!-- .slide: data-background="Cyan" -->
+
+Bundle insight
+
+```Bash
+$ yarn build:stats
+$ npx webpack-bundle-analyzer stats.json
+```
+
+
+<!-- .slide: data-background="Cyan" data-background-image="./resources/imgs/patternslib-bundle-analyzation.png" -->
 
 
 
