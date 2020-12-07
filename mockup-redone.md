@@ -62,13 +62,106 @@ Outlook <!-- .element: class="fragment" -->
 ## Mockup
 
 
-<!-- .slide: class="full" data-background="DeepPink" data-background-video="./resources/screencasts/mockup-history-gitg-5-edit.webm" -->
+<!-- .slide: class="full" data-background="DeepPink" -->
+
+<video controls src="./resources/screencasts/mockup-history-gitg-5-edit.webm" />
 
 
-<!-- .slide: class="full" data-background="DeepPink" data-background-video="./resources/screencasts/mockup-history-plone-release.webm" -->
+<!-- .slide: class="full" data-background="DeepPink" -->
+
+<video controls src="./resources/screencasts/mockup-history-plone-release.webm" />
 
 
-<!-- .slide: class="full" data-background="DeepPink" data-background-video="./resources/screencasts/mockup-resourceregistry-plone4-edit.webm" -->
+<!-- .slide: class="full" data-background="DeepPink" -->
+
+<video controls src="./resources/screencasts/mockup-resourceregistry-plone4-edit.webm" />
+
+
+
+
+<!-- .slide: data-background="Yellow" -->
+# Patternslib showcase
+
+
+<!-- .slide: data-background="Yellow" -->
+
+- [https://patternslib.com/](https://patternslib.com/)
+
+- [https://github.com/patternslib/Patterns](https://github.com/patternslib/Patterns)
+
+
+<!-- .slide: class="full" data-background="Yellow" -->
+
+<video controls src="./resources/screencasts/pat-patterns.webm" />
+
+
+<!-- .slide: data-background="Yellow" -->
+
+```html [|2]
+<input
+    class="pat-date-picker"
+    type="date" />
+```
+
+
+<!-- .slide: class="full" data-background="Yellow" -->
+
+<video controls src="./resources/screencasts/pat-date-picker.webm" />
+
+
+<!-- .slide: data-background="Yellow" -->
+
+```html [|2]
+<form
+    class="pat-autosubmit"
+    action="./@@test-action"
+    method="POST">
+</form>
+```
+
+
+<!-- .slide: class="full" data-background="Yellow" -->
+
+<video controls src="./resources/screencasts/pat-auto-submit.webm" />
+
+
+<!-- .slide: data-background="Yellow" -->
+
+```html
+<div
+    class="pat-tiptap"
+    data-pat-tiptap="collaboration-server: wss://demos.yjs.dev;
+                     collaboration-document: patternslib-demo">
+</div>
+```
+
+
+<!-- .slide: class="full" data-background="Yellow" -->
+
+<video controls src="./resources/screencasts/pat-tiptap.webm" />
+
+
+
+
+<!-- .slide: data-background="Yellow" -->
+
+## Core Patternslib Patterns
+
+- TODO: show
+
+<!-- .slide: data-background="Yellow" -->
+
+## Sortable Table Pattern
+
+
+<!-- .slide: data-background="Yellow" -->
+
+## Upload Pattern
+
+
+<!-- .slide: data-background="Yellow" -->
+
+## Texteditor Patterns
 
 
 
@@ -419,11 +512,23 @@ As it was in Plone 4, a restart should automatically invalidate the caches and g
 
 <!-- .slide: data-background="Blue" -->
 
-- Webpack, Jest, code restructuring done.
+- Code restructuring done.
+
+- Webpack, Babel, Jest configured.
 
 - Some patterns ported.
 
 - Some tests pass.
+
+
+<!-- .slide: class="full" data-background="Blue" -->
+
+<video controls src="./resources/screencasts/mockup-es6-jest.webm" />
+
+
+<!-- .slide: class="full" data-background="Blue" -->
+
+<video controls src="./resources/screencasts/mockup-es6-11ty.webm" />
 
 
 <!-- .slide: data-background="Blue" -->
