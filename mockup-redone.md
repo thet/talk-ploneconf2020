@@ -43,7 +43,7 @@
 
 <!-- .slide: data-background="yellow" -->
 
-History <!-- .element: class="fragment" -->
+History
 
 The new Mockup <!-- .element: class="fragment" -->
 
@@ -197,7 +197,7 @@ export default Base.extend({
     name: "masonry",
     trigger: ".pat-masonry",
 
-    async init($el, opts) {
+    init($el, opts) {
         // ...
     },
 });
@@ -414,30 +414,16 @@ As it was in Plone 4, a restart should automatically invalidate the caches and g
 
 <!-- .slide: data-background="Blue" -->
 
-## Playwright testing
+## Current status
 
 
 <!-- .slide: data-background="Blue" -->
 
-- Browser automation like
+- Webpack, Jest, code restructuring done.
 
-- Like Cypress, Selenium, Robot
+- Some patterns ported.
 
-- Based on async/await
-
-
-<!-- .slide: data-background="Blue" -->
-
-## Webpack Module Federation
-
-
-<!-- .slide: data-background="Blue" -->
-
-- Webpack 5
-
-- Depend on code modules defined other bundles
-
-- Possible solution for adding JS via addons without code duplication
+- Some tests pass.
 
 
 <!-- .slide: data-background="Blue" -->
@@ -456,13 +442,30 @@ As it was in Plone 4, a restart should automatically invalidate the caches and g
 
 <!-- .slide: data-background="Blue" -->
 
-- Current status:
+## Playwright testing
 
-    - Infrastructure OK.
 
-    - Some patterns ported.
+<!-- .slide: data-background="Blue" -->
 
-    - Some tests pass.
+- Browser automation
+
+- Like Cypress, Selenium, Robot
+
+- Based on async/await
+
+
+<!-- .slide: data-background="Blue" -->
+
+## Webpack Module Federation
+
+
+<!-- .slide: data-background="Blue" -->
+
+- Webpack 5
+
+- Depend on code modules defined other bundles
+
+- Possible solution for adding JS via addons without code duplication
 
 
 
