@@ -42,15 +42,20 @@
 
 
 <!-- .slide: data-background="yellow" -->
-it's Vue.js, not Vue.
 
-_But I'll call it Vue._ <!-- .element: class="fragment" -->
+History <!-- .element: class="fragment" -->
+
+The new Mockup <!-- .element: class="fragment" -->
+
+The new Resource Registry <!-- .element: class="fragment" -->
+
+Outlook <!-- .element: class="fragment" -->
 
 
 
 
 <!-- .slide: data-background="DeepPink" -->
-# History lesson
+# History
 
 
 <!-- .slide: data-background="DeepPink" -->
@@ -81,6 +86,9 @@ _But I'll call it Vue._ <!-- .element: class="fragment" -->
 
 ## Based on latest Patternslib
 
+
+<!-- .slide: data-background="Cyan" -->
+
 - Well maintained
 
 - Used in many industry projects
@@ -99,6 +107,9 @@ _But I'll call it Vue._ <!-- .element: class="fragment" -->
 
 ## Modernized Code Base
 
+
+<!-- .slide: data-background="Cyan" -->
+
 - ES6+ syntax and features
 
 - ES6 module system
@@ -111,6 +122,9 @@ _But I'll call it Vue._ <!-- .element: class="fragment" -->
 <!-- .slide: data-background="Cyan" -->
 
 ## ES6+ Syntax
+
+
+<!-- .slide: data-background="Cyan" -->
 
 - Default parameters
 
@@ -126,6 +140,9 @@ _But I'll call it Vue._ <!-- .element: class="fragment" -->
 <!-- .slide: data-background="Cyan" -->
 
 ## ES6 module system
+
+
+<!-- .slide: data-background="Cyan" -->
 
 - Old - RequireJS:
 
@@ -165,6 +182,9 @@ export default Base.extend({
 <!-- .slide: data-background="Cyan" -->
 
 ## Dynamic Imports
+
+
+<!-- .slide: data-background="Cyan" -->
 
 - Normal imports:
 
@@ -253,6 +273,89 @@ $ npx webpack-bundle-analyzer stats.json
 <!-- .slide: data-background="Cyan" data-background-image="./resources/imgs/patternslib-bundle-analyzation.png" -->
 
 
+<!-- .slide: data-background="Cyan" -->
+
+## Testing
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- [Jest](https://jestjs.io/)
+
+- [jsDOM](https://github.com/jsdom/jsdom/)
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- TODO: add screencast of selectively running a test
+
+
+<!-- .slide: data-background="Cyan" -->
+
+## Bundling
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- Webpack.
+
+- No more Grunt.
+
+- No need to query the resource registry.
+
+- No RequireJS dependency definitions.
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- Bundle analyzation tools
+
+- Code splitting
+
+- Tree Shaking
+
+- Module Federation (more on that later)
+
+
+<!-- .slide: data-background="Cyan" -->
+
+## Documentation
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- Remove own React 0.10 based documentation generator
+
+- Use 11ty
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- Compatible to Jekyll
+
+- Markdown docs
+
+- Interactable live examples
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- TODO: show example
+
+
+<!-- .slide: data-background="Cyan" -->
+
+## Even more:
+
+- Babel transpiling
+
+- Yarn package management
+
+- ESLint
+
+- Prettier
+
+
 
 
 <!-- .slide: data-background="DeepSkyBlue" -->
@@ -260,7 +363,47 @@ $ npx webpack-bundle-analyzer stats.json
 
 
 <!-- .slide: data-background="DeepSkyBlue" -->
-- dings
+
+- Described in [PLIP 3211](https://github.com/plone/Products.CMFPlone/issues/3211)
+
+
+<!-- .slide: data-background="DeepSkyBlue" -->
+
+## Simplification
+
+
+<!-- .slide: data-background="DeepSkyBlue" -->
+
+- Only bundles
+
+- No more resources and "resource bundles"
+
+
+<!-- .slide: data-background="DeepSkyBlue" -->
+
+- Bundling standard tools (default: Webpack)
+
+- No more TTW bundling
+
+Note:
+You can use the bundler of your choice.
+As genious as it was, TTW bundling via rjs and less.js are not possible anymore.
+This feature will be removed
+
+
+<!-- .slide: data-background="DeepSkyBlue" -->
+
+## Cache Busting Improvements
+
+
+<!-- .slide: data-background="DeepSkyBlue" -->
+
+- Resource refresh at restart
+
+- Button to refresh resources
+
+Note:
+As it was in Plone 4, a restart should automatically invalidate the caches and generate new caching URLs for all bundles.
 
 
 
@@ -270,17 +413,64 @@ $ npx webpack-bundle-analyzer stats.json
 
 
 <!-- .slide: data-background="Blue" -->
-- dings
+
+## Playwright testing
+
+
+<!-- .slide: data-background="Blue" -->
+
+- Browser automation like
+
+- Like Cypress, Selenium, Robot
+
+- Based on async/await
+
+
+<!-- .slide: data-background="Blue" -->
+
+## Webpack Module Federation
+
+
+<!-- .slide: data-background="Blue" -->
+
+- Webpack 5
+
+- Depend on code modules defined other bundles
+
+- Possible solution for adding JS via addons without code duplication
+
+
+<!-- .slide: data-background="Blue" -->
+
+## Finalizing at upcoming sprints
+
+
+<!-- .slide: data-background="Blue" -->
+
+- Prefer patterns from patternslib.
+
+- Port the rest to ES6.
+
+- Make tests pass.
+
+
+<!-- .slide: data-background="Blue" -->
+
+- Current status:
+
+    - Infrastructure OK.
+
+    - Some patterns ported.
+
+    - Some tests pass.
 
 
 
 
-<!-- .slide: data-background="Purple" -->
-# done()
+<!-- .slide: data-background="Black" -->
 
 
-<!-- .slide: data-background="Purple" -->
-- dings
 
 
+<!-- .slide: data-background="Purple" data-background-image="./resources/imgs/thats_all_folks.svg" -->
 
