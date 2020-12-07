@@ -62,13 +62,13 @@ Outlook <!-- .element: class="fragment" -->
 ## Mockup
 
 
-<!-- .slide: class="full" data-background="DeepPink" data-background-video="./resources/screencasts/mockup-history-gitg-5.webm" -->
+<!-- .slide: class="full" data-background="DeepPink" data-background-video="./resources/screencasts/mockup-history-gitg-5-edit.webm" -->
 
 
 <!-- .slide: class="full" data-background="DeepPink" data-background-video="./resources/screencasts/mockup-history-plone-release.webm" -->
 
 
-<!-- .slide: class="full" data-background="DeepPink" data-background-video="./resources/screencasts/mockup-resourceregistry-plone4.webm" -->
+<!-- .slide: class="full" data-background="DeepPink" data-background-video="./resources/screencasts/mockup-resourceregistry-plone4-edit.webm" -->
 
 
 
