@@ -54,6 +54,8 @@ body {
 .reveal pre code {
   box-sizing: border-box;
   box-shadow: none;
+  max-height: 90%;
+  padding: 1em 0.5em;
 }
 .reveal .full,
 .reveal .full pre,

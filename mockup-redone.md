@@ -54,10 +54,6 @@ Outlook <!-- .element: class="fragment" -->
 # History
 
 
-<!-- .slide: data-background="DeepPink" -->
-## Mockup
-
-
 <!-- .slide: class="full" data-background="DeepPink" -->
 
 <video controls src="./resources/screencasts/mockup-history-gitg-5-edit.webm" />
@@ -66,6 +62,26 @@ Outlook <!-- .element: class="fragment" -->
 <!-- .slide: class="full" data-background="DeepPink" -->
 
 <video controls src="./resources/screencasts/syslab-rok.webm" />
+
+
+<!-- .slide: class="full" data-background="DeepPink" -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TIQTZZpErvc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<!-- .slide: class="full" data-background="DeepPink" -->
+
+- [jQuery 1.8](https://jquery.org/history/)
+
+- [AngularJS 1.0/1.1](https://github.com/angular/angular.js/blob/master/CHANGELOG.md#111-pathological-kerning-2012-11-26)
+
+- [React not even released (May 2013)](https://github.com/facebook/react/blob/master/CHANGELOG.md#030-may-29-2013)
+
+- [Bower 0.6](https://github.com/bower/bower/blob/master/CHANGELOG.md#065---2012-12-01)
+
+- [Node 0.8, npm 1.1](https://nodejs.org/en/download/releases/)
+
+- [Backbone 0.9](https://github.com/jashkenas/backbone/releases?after=1.2.0)
 
 
 <!-- .slide: class="full" data-background="DeepPink" -->
@@ -81,46 +97,48 @@ Outlook <!-- .element: class="fragment" -->
 
 
 <!-- .slide: data-background="Cyan" -->
-# The new Mockup /1
+
+# What's the Patternslib
+
+
+<!-- .slide: class="full" data-background="DeepPink" -->
+
+- Library of interaction patterns
+
+- Easy to use for designers
+
+- Flexible to develop for developers
+
+- Web Components like approach
+
+
+<!-- .slide: class="full" data-background="DeepPink" -->
+
+- Patternslib: Cornelis Kolbach, Wichert Akkerman, Florian Friesdorf.
+
+- Roots back to 2005
+
+- Based around Ajax ideas by Jesse Garret
 
 
 <!-- .slide: data-background="Cyan" -->
 
-- Described in [PLIP 3211](https://github.com/plone/Products.CMFPlone/issues/3211)
-
-
-<!-- .slide: data-background="Cyan" -->
-
-## Based on latest Patternslib
-
-
-<!-- .slide: data-background="Cyan" -->
+- Soon after 2012 adapted by Syslab.com
 
 - Well maintained
 
 - Used in many industry projects
 
-- Web Component like library
-
 
 <!-- .slide: data-background="Cyan" -->
 
-- [https://patternslib.com/](https://patternslib.com/)
+- [http://beta.patternslib.com/](http://beta.patternslib.com/)
 
 - [https://github.com/patternslib/Patterns](https://github.com/patternslib/Patterns)
 
 
-
-
 <!-- .slide: data-background="Yellow" -->
-# Patternslib showcase
-
-
-<!-- .slide: data-background="Yellow" -->
-
-- [https://patternslib.com/](https://patternslib.com/)
-
-- [https://github.com/patternslib/Patterns](https://github.com/patternslib/Patterns)
+## Patternslib showcase
 
 
 <!-- .slide: class="full" data-background="Yellow" -->
@@ -129,12 +147,7 @@ Outlook <!-- .element: class="fragment" -->
 
 
 <!-- .slide: data-background="Yellow" -->
-
-```html [|2]
-<input
-    class="pat-date-picker"
-    type="date" />
-```
+## Date Picker
 
 
 <!-- .slide: class="full" data-background="Yellow" -->
@@ -144,23 +157,76 @@ Outlook <!-- .element: class="fragment" -->
 
 <!-- .slide: data-background="Yellow" -->
 
-```html [|2]
-<form
-    class="pat-autosubmit"
-    action="./@@test-action"
-    method="POST">
-</form>
+```html [|2|]
+<input
+    class="pat-date-picker"
+    type="date" />
 ```
+
+
+<!-- .slide: data-background="Yellow" -->
+## Combination of multiple patterns: Quaive commentbox
 
 
 <!-- .slide: class="full" data-background="Yellow" -->
 
-<video controls src="./resources/screencasts/pat-auto-submit.webm" />
+<video controls src="./resources/screencasts/patternslib-demo-quaive.webm" />
 
 
 <!-- .slide: data-background="Yellow" -->
 
-```html
+```html [|2|4|3|]
+<a
+    class="pat-tooltip"
+    href="./@@panel-users?thread_id=1594729757829549#status-user-selector::element"
+    data-pat-tooltip="position: tl; source: ajax; class: mentions;"
+>Benutzer erwähnen</a>
+```
+
+
+<!-- .slide: data-background="Yellow" -->
+
+```html [|4,19|5|6|9,18|10|11-15|17|]
+<!-- tooltip contents -->
+
+<!-- search form -->
+<form class="pat-inject pat-autosubmit" action="./@@panel-users#postbox-users" method="post">
+  <input autofocus="autofocus" name="usersearch" type="search" />
+  <input name="thread_id:int" type="hidden" value="1594729757829549" />
+
+  <!-- search results -->
+  <form class="pat-inject pat-autosubmit"
+     action="./@@update-social.html"
+     data-pat-inject="
+      source: #comment_box_1594729757829549-selected-users;
+      target: #comment_box_1594729757829549-selected-users &&
+      source: #selected-users-data;
+      target: #selected-users-data;">
+
+     <input name="users:list" type="checkbox" value="esmeralda_claassen" />
+  </form>
+</form>
+```
+
+
+<!-- .slide: data-background="Yellow" -->
+
+```html [|2|3|4|]
+<a
+    class="pat-gallery"
+    href="./@status-attachments/1594729897846520/grinsekatze.jpg">
+  <img src="./@@status-attachments/1594729897846520/grinsekatze.jpg/@@images/3col" />
+</a>
+```
+
+
+<!-- .slide: data-background="Yellow" -->
+## TipTap - Collaborative Editor
+
+
+<!-- .slide: data-background="Yellow" -->
+
+```html [|2|3,4|]
 <div
     class="pat-tiptap"
     data-pat-tiptap="collaboration-server: wss://demos.yjs.dev;
@@ -177,7 +243,24 @@ Outlook <!-- .element: class="fragment" -->
 
 
 <!-- .slide: data-background="Cyan" -->
-# The new Mockup /2
+# The new Mockup
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- Described in [PLIP 3211](https://github.com/plone/Products.CMFPlone/issues/3211)
+
+
+<!-- .slide: data-background="Cyan" -->
+
+## Why?
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- Plone Classic
+
+- Current JS: dead end <!-- .element: class="fragment" -->
 
 
 <!-- .slide: data-background="Cyan" -->
@@ -221,12 +304,12 @@ Outlook <!-- .element: class="fragment" -->
 
 <!-- .slide: data-background="Cyan" -->
 
-- Old - RequireJS:
+- Old - RequireJS (mockup pattern):
 
-```js
+```js [|2|3|4|]
 define([
     "pat-base",
-    "pat-parser"
+    "pat-mockup-parser"
 ], function(Base, Parser) {
 
 });
@@ -235,9 +318,40 @@ define([
 
 <!-- .slide: data-background="Cyan" -->
 
+- Old - RequireJS - config.js (mockup):
+
+```js []
+var requirejsOptions = {
+    paths: {
+        "pat-base":          "node_modules/patternslib/src/core/base",
+        "pat-mockup-parser": "node_modules/patternslib/src/core/mockup-parser",
+        // ...
+    },
+};
+```
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- Old - RequireJS - resources.xml (plone.staticresources):
+
+```xml
+  <records prefix="plone.resources/pat-base"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">++plone++static/components/patternslib/src/core/base.js</value>
+  </records>
+  <records prefix="plone.resources/pat-mockup-parser"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">++plone++static/components/patternslib/src/core/mockup-parser.js</value>
+  </records>
+```
+
+
+<!-- .slide: data-background="Cyan" -->
+
 - New - ES6 imports/exports
 
-```js
+```js [|1|2|]
 import Base from "../../core/base";
 import Parser from "../../core/parser";
 
@@ -265,7 +379,7 @@ export default Base.extend({
 
 - Normal imports:
 
-```js
+```js [|2|3|]
 import Base from "../../core/base";
 import Masonry from "masonry-layout";
 import ImagesLoaded from "imagesloaded";
@@ -285,7 +399,7 @@ export default Base.extend({
 
 - Dynamic imports:
 
-```js
+```js [|9|11|8|1|]
 import "regenerator-runtime/runtime"; // needed for ``await`` support
 import Base from "../../core/base";
 
@@ -318,7 +432,7 @@ export default Base.extend({
 
 Without dynamic imports
 
-```Bash [4]
+```Bash [|4]
 ploneintranet.prototype 5.1.0
 Patternslib 3
 3.5 MB bundle.js
@@ -328,7 +442,7 @@ Patternslib 3
 
 With dynamic imports
 
-```Bash [4]
+```Bash [|4]
 ploneintranet.prototype master
 Patternslib 4
 1.1 MB bundle.js
