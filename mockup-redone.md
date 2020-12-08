@@ -24,7 +24,8 @@
 
 
 <!-- .slide: data-background="lime" -->
-<!-- - [https://thet.github.io/talk-ploneconf2020](https://thet.github.io/talk-ploneconf2020) -->
+
+- [https://thet.github.io/talk-ploneconf2020](https://thet.github.io/talk-ploneconf2020)
 
 - [https://github.com/thet/talk-ploneconf2020](https://github.com/thet/talk-ploneconf2020)
 
