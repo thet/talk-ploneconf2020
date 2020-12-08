@@ -12,16 +12,10 @@
 
 
 <!-- .slide: data-background="lime" -->
-<img alt="programmatic Logo" title="programmatic.pro" class="antiantialias" style="width: 60%; height: auto" src="./resources/logos/programmatic-logo-w-200.png" />
-
-
-<!-- .slide: data-background="lime" -->
-<img alt="BlueDynamics Logo" title="bluedynamics.com" style="width: 60%; height: auto" src="./resources/logos/bdan-logo4.svg" />
-
-
-<!-- .slide: data-background="lime" -->
 - Plone Foundation Member
 - Former Plone Framework Team Member
+- BlueDynamics Alliance Member
+- Buschenschanksprint Organizer
 
 
 <!-- .slide: data-background="lime" -->
@@ -30,8 +24,8 @@
 
 
 <!-- .slide: data-background="lime" -->
-- TODO
-- [https://thet.github.io/talk-ploneconf2020](https://thet.github.io/talk-ploneconf2020)
+<!-- - [https://thet.github.io/talk-ploneconf2020](https://thet.github.io/talk-ploneconf2020) -->
+
 - [https://github.com/thet/talk-ploneconf2020](https://github.com/thet/talk-ploneconf2020)
 
 
@@ -46,6 +40,8 @@
 History
 
 The new Mockup <!-- .element: class="fragment" -->
+
+Patternslib Showcase <!-- .element: class="fragment" -->
 
 The new Resource Registry <!-- .element: class="fragment" -->
 
@@ -69,12 +65,49 @@ Outlook <!-- .element: class="fragment" -->
 
 <!-- .slide: class="full" data-background="DeepPink" -->
 
+<video controls src="./resources/screencasts/syslab-rok.webm" />
+
+
+<!-- .slide: class="full" data-background="DeepPink" -->
+
 <video controls src="./resources/screencasts/mockup-history-plone-release.webm" />
 
 
 <!-- .slide: class="full" data-background="DeepPink" -->
 
 <video controls src="./resources/screencasts/mockup-resourceregistry-plone4-edit.webm" />
+
+
+
+
+<!-- .slide: data-background="Cyan" -->
+# The new Mockup /1
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- Described in [PLIP 3211](https://github.com/plone/Products.CMFPlone/issues/3211)
+
+
+<!-- .slide: data-background="Cyan" -->
+
+## Based on latest Patternslib
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- Well maintained
+
+- Used in many industry projects
+
+- Web Component like library
+
+
+<!-- .slide: data-background="Cyan" -->
+
+- [https://patternslib.com/](https://patternslib.com/)
+
+- [https://github.com/patternslib/Patterns](https://github.com/patternslib/Patterns)
 
 
 
@@ -143,57 +176,8 @@ Outlook <!-- .element: class="fragment" -->
 
 
 
-<!-- .slide: data-background="Yellow" -->
-
-## Core Patternslib Patterns
-
-- TODO: show
-
-<!-- .slide: data-background="Yellow" -->
-
-## Sortable Table Pattern
-
-
-<!-- .slide: data-background="Yellow" -->
-
-## Upload Pattern
-
-
-<!-- .slide: data-background="Yellow" -->
-
-## Texteditor Patterns
-
-
-
-
 <!-- .slide: data-background="Cyan" -->
-# The new Mockup
-
-
-<!-- .slide: data-background="Cyan" -->
-
-- Described in [PLIP 3211](https://github.com/plone/Products.CMFPlone/issues/3211)
-
-
-<!-- .slide: data-background="Cyan" -->
-
-## Based on latest Patternslib
-
-
-<!-- .slide: data-background="Cyan" -->
-
-- Well maintained
-
-- Used in many industry projects
-
-- Web Component like library
-
-
-<!-- .slide: data-background="Cyan" -->
-
-- [https://patternslib.com/](https://patternslib.com/)
-
-- [https://github.com/patternslib/Patterns](https://github.com/patternslib/Patterns)
+# The new Mockup /2
 
 
 <!-- .slide: data-background="Cyan" -->
@@ -378,9 +362,9 @@ $ npx webpack-bundle-analyzer stats.json
 - [jsDOM](https://github.com/jsdom/jsdom/)
 
 
-<!-- .slide: data-background="Cyan" -->
+<!-- .slide: class="full" data-background="Yellow" -->
 
-- TODO: add screencast of selectively running a test
+<video controls src="./resources/screencasts/patternslib-jest.webm" />
 
 
 <!-- .slide: data-background="Cyan" -->
@@ -429,11 +413,6 @@ $ npx webpack-bundle-analyzer stats.json
 - Markdown docs
 
 - Interactable live examples
-
-
-<!-- .slide: data-background="Cyan" -->
-
-- TODO: show example
 
 
 <!-- .slide: data-background="Cyan" -->

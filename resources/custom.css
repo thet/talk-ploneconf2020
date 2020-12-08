@@ -110,13 +110,8 @@ h1 {
   line-height: 1em;
 }
 
-.cover h1,
-.cover h2 {
-  text-align: right;
-}
-.cover h3,
-.cover p {
-  text-align: left;
+.cover footer {
+  margin-top: 4em;
 }
 
 .top {
