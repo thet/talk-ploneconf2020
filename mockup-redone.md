@@ -263,6 +263,8 @@ Outlook <!-- .element: class="fragment" -->
 
 - Current JS: dead end <!-- .element: class="fragment" -->
 
+- Modernized Patternslib <!-- .element: class="fragment" -->
+
 
 <!-- .slide: data-background="Cyan" -->
 
@@ -409,9 +411,9 @@ export default Base.extend({
     trigger: ".pat-masonry",
 
     async init($el, opts) {
-        Masonry = await import("masonry-layout");
+        let Masonry = await import("masonry-layout");
         Masonry = Masonry.default;
-        ImagesLoaded = await import("imagesloaded");
+        let ImagesLoaded = await import("imagesloaded");
         ImagesLoaded = ImagesLoaded.default;
 
         // ...
@@ -563,7 +565,7 @@ $ npx webpack-bundle-analyzer stats.json
 
 - Only bundles
 
-- No more resources and "resource bundles"
+- No more resources and bundle definition resources
 
 
 <!-- .slide: data-background="DeepSkyBlue" -->
@@ -601,7 +603,7 @@ As it was in Plone 4, a restart should automatically invalidate the caches and g
 
 <!-- .slide: data-background="Blue" -->
 
-## Current status
+## Current status Mockup
 
 
 <!-- .slide: data-background="Blue" -->
@@ -613,6 +615,22 @@ As it was in Plone 4, a restart should automatically invalidate the caches and g
 - Some patterns ported.
 
 - Some tests pass.
+
+- Proof of Concept: OK!
+
+
+<!-- .slide: data-background="Blue" -->
+
+- Prefer Patternslib patterns over Mockup
+
+- Port the rest to ES6.
+
+- Make tests pass.
+
+
+<!-- .slide: data-background="Blue" -->
+
+- Resource Registry: TBD.
 
 
 <!-- .slide: class="full" data-background="Blue" -->
@@ -632,21 +650,12 @@ As it was in Plone 4, a restart should automatically invalidate the caches and g
 
 <!-- .slide: data-background="Blue" -->
 
-- Prefer patterns from patternslib.
-
-- Port the rest to ES6.
-
-- Make tests pass.
-
-
-<!-- .slide: data-background="Blue" -->
-
 ## Playwright testing
 
 
 <!-- .slide: data-background="Blue" -->
 
-- Browser automation
+- Browser automation/testing
 
 - Like Cypress, Selenium, Robot
 
@@ -660,11 +669,27 @@ As it was in Plone 4, a restart should automatically invalidate the caches and g
 
 <!-- .slide: data-background="Blue" -->
 
-- Webpack 5
+- Webpack 5 feature
 
-- Depend on code modules defined other bundles
+- Depend on modules defined in other bundles
 
-- Possible solution for adding JS via addons without code duplication
+- Maybe for the Plone addon problem
+
+- No Proof of Concept yet
+
+
+<!-- .slide: class="full" data-background="blue" -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D3XYAx30CNc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<!-- .slide: data-background="blue" -->
+
+- [https://webpack.js.org/concepts/module-federation/](https://webpack.js.org/concepts/module-federation/)
+
+- [https://dev.to/marais/webpack-5-and-module-federation-4j1i](https://dev.to/marais/webpack-5-and-module-federation-4j1i)
+
+- [https://module-federation.github.io/blog/get-started](https://module-federation.github.io/blog/get-started)
 
 
 
